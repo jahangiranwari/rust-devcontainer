@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  app:
+    image: rust:1.70.0
+    command: tail -f /dev/null # keep container running
+    working_dir: /apps
+    environment:
+      - CARGO_TARGET_DIR=/tmp/target # to avoid linker issues
+    volumes:
+      - .:/apps
+    ports:
+      - 3000:3000
