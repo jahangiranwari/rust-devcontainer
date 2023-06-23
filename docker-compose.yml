@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   app:
-    image: rust:1.70.0
+    image: rust:latest
     command: tail -f /dev/null # keep container running
     working_dir: /apps
     environment:
